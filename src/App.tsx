@@ -2,6 +2,7 @@ import { MarketDemand } from "./containers/market-demand/MarketDemand";
 import { SalaryLandscape } from "./containers/salary-landscape/SalaryLandscape";
 import { MarketShape } from "./containers/market-shape/MarketShape";
 import { PayVsHours } from "./containers/pay-vs-hours/PayVsHours";
+import githubLogo from "./assets/github-logo.svg";
 
 function App() {
   return (
@@ -25,6 +26,30 @@ function App() {
         <MarketShape />
         <PayVsHours />
       </main>
+      <footer className="mx-40 my-3 p-2 border-t ">
+        <p>Source Codes for this Project</p>
+        <div className="flex gap-4">
+          <div className="flex gap-2 items-center">
+            <img src={githubLogo} alt="GitHub Logo" className="w-4" />
+            <a
+              href="https://github.com/kenBinary/olj-insights"
+              className="text-blue-500 underline"
+            >
+              Data Collection and Analysis
+            </a>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <img src={githubLogo} alt="GitHub Logo" className="w-4" />
+            <a
+              href="https://github.com/kenBinary/olj-insights-website"
+              className="text-blue-500 underline"
+            >
+              Website Code
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
