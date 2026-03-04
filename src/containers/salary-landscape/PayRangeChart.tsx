@@ -2,6 +2,7 @@ import { useState } from "react";
 import Plot from "react-plotly.js";
 import payRange from "../../data/salary-landscape/pay_range_by_work_type.json";
 import type { Data, Layout } from "plotly.js";
+import { ChartHeader } from "../../components/ChartHeader";
 
 type Currency = "PHP" | "USD";
 type TimeRange = "Hourly" | "Weekly" | "Monthly";
@@ -25,14 +26,11 @@ export function PayRangeChart() {
 
   return (
     <div className="p-5 border flex-1">
-      <div className="mb-4">
-        <p className="text-xs uppercase tracking-widest mb-1">By Work Type</p>
-        <h4 className="text-xl font-semibold mb-1">Pay Range by Work Type</h4>
-        <p className="text-sm">
-          IQR box plots showing median, Q1-Q3, and outlier range across work
-          types.
-        </p>
-      </div>
+      <ChartHeader
+        overLine="By Work Type"
+        title="Pay Range by Work Type"
+        description="IQR box plots showing median, Q1-Q3, and outlier range across work types."
+      />
 
       <div className="flex flex-wrap gap-4 mb-4">
         <div className="flex items-center gap-2">

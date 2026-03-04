@@ -2,6 +2,7 @@ import { useState } from "react";
 import Plot from "react-plotly.js";
 import salaryDistribution from "../../data/salary-landscape/salary_distribution.json";
 import type { Data, Layout } from "plotly.js";
+import { ChartHeader } from "../../components/ChartHeader";
 
 type Currency = "PHP" | "USD";
 type TimeRange = "Hourly" | "Weekly" | "Monthly";
@@ -25,13 +26,11 @@ export function SalaryDistributionChart() {
 
   return (
     <div className="p-5 border flex-1">
-      <div className="mb-4">
-        <p className="text-xs uppercase tracking-widest mb-1">Distribution</p>
-        <h4 className="text-xl font-semibold mb-1">Salary Distribution</h4>
-        <p className="text-sm">
-          Hourly, weekly, and monthly salary distributions in PHP and USD.
-        </p>
-      </div>
+      <ChartHeader
+        overLine="distribution"
+        title="Salary Distribution"
+        description="Hourly, weekly, and monthly salary distributions in PHP and USD."
+      />
 
       <div className="flex flex-wrap gap-4 mb-4">
         <div className="flex items-center gap-2">
