@@ -17,14 +17,14 @@ export function SkillByWorkTypeChart() {
   const activeChart = charts.find((c) => c.key === selectedWorkType);
 
   return (
-    <div className="p-5 border flex-1">
+    <div className="lg:p-5 p-3 border flex-1">
       <ChartHeader
         overLine="Work Type Breakdown"
         title="Top Skills by Work Type"
         description="Most in-demand skills segmented by employment type (Full Time, Gig, Part Time)."
       />
 
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div className="flex flex-wrap lg:gap-4 gap-2 lg:mb-4 mb-2">
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium uppercase tracking-wide">
             Work Type

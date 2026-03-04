@@ -2,7 +2,7 @@ import { ChartHeader } from "../../components/ChartHeader";
 
 export function AveragePayByCategoryChart() {
   return (
-    <div className="p-5 border flex-1">
+    <div className="lg:p-5 p-3 border flex-1">
       <ChartHeader
         overLine="Rankings"
         title="Average Pay by Category"

@@ -25,14 +25,14 @@ export function PayRangeChart() {
   const activeChart = charts.find((c) => c.key === activeKey);
 
   return (
-    <div className="p-5 border flex-1">
+    <div className="lg:p-5 p-3 border flex-1">
       <ChartHeader
         overLine="By Work Type"
         title="Pay Range by Work Type"
         description="IQR box plots showing median, Q1-Q3, and outlier range across work types."
       />
 
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div className="flex flex-wrap lg:gap-4 gap-2 lg:mb-4 mb-2">
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium uppercase tracking-wide">
             Currency

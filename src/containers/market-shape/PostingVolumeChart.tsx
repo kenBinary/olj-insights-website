@@ -10,7 +10,7 @@ const chartLayout: Partial<Layout> = (chartJson as any).layout;
 
 export function PostingVolumeChart() {
   return (
-    <div className="p-5 border flex-1">
+    <div className="lg:p-5 p-3 border flex-1">
       <ChartHeader
         overLine="Trends"
         title="Job Posting Volume"

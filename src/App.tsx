@@ -7,26 +7,26 @@ import githubLogo from "./assets/github-logo.svg";
 function App() {
   return (
     <>
-      <header className="mx-40 my-10">
+      <header className="lg:mx-40 lg:my-10 p-5">
         <p className="text-sm">Philippine Remote Job Market · Data Report</p>
-        <h1 className="text-7xl font-extrabold">
+        <h1 className="lg:text-7xl font-extrabold text-4xl">
           The <i> Remote</i> <br />
           Job Market <br />
           Decoded.
         </h1>
-        <p className="w-[50ch] my-2">
+        <p className="lg:w-[50ch] lg:my-2">
           25, 000+ listings scraped and analyzed to reveal where opportunity
           lives, what skills are in demand, and how to navigate the remote job
           market in the Philippines.
         </p>
       </header>
-      <main className="mx-40 my-5">
+      <main className="lg:mx-40 lg:my-5 px-5">
         <SalaryLandscape />
         <MarketDemand />
         <MarketShape />
         <PayVsHours />
       </main>
-      <footer className="mx-40 my-3 p-2 border-t ">
+      <footer className="lg:mx-40 lg:my-3 lg:p-2 p-5 border-t">
         <p>Source Codes for this Project</p>
         <div className="flex gap-4">
           <div className="flex gap-2 items-center">

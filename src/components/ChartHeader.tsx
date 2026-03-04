@@ -8,9 +8,9 @@ export function ChartHeader({
   description: string;
 }) {
   return (
-    <div className="mb-4">
+    <div className="lg:mb-4 mb-2">
       <p className="text-xs uppercase tracking-widest mb-1">{overLine}</p>
-      <h4 className="text-xl font-semibold mb-1">{title}</h4>
+      <h4 className="lg:text-xl text-lg font-semibold mb-1">{title}</h4>
       <p className="text-sm">{description}</p>
     </div>
   );

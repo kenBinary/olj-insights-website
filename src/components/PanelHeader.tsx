@@ -6,9 +6,9 @@ export function PanelHeader({
   title: string;
 }) {
   return (
-    <div className="border-b pb-5 mb-5">
+    <div className="border-b lg:pb-5 lg:mb-5">
       <p className="text-sm tracking-wide">{overLine}</p>
-      <h2 className="text-4xl font-bold">{title}</h2>
+      <h2 className="lg:text-4xl text-2xl font-bold">{title}</h2>
     </div>
   );
 }

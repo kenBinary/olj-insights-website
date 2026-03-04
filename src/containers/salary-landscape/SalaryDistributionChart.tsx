@@ -25,14 +25,14 @@ export function SalaryDistributionChart() {
   const activeChart = charts.find((c) => c.key === activeKey);
 
   return (
-    <div className="p-5 border flex-1">
+    <div className="lg:p-5 p-3 border flex-1">
       <ChartHeader
         overLine="distribution"
         title="Salary Distribution"
         description="Hourly, weekly, and monthly salary distributions in PHP and USD."
       />
 
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div className="flex flex-wrap lg:gap-4 gap-2 lg:mb-4 mb-2">
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium uppercase tracking-wide">
             Currency
