@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# OLJ Insights Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend website for visualizing results from the OLJ data analysis project.
 
-Currently, two official plugins are available:
+The analysis pipeline (scraping, cleaning, and computation) lives in:
+https://github.com/kenBinary/olj-insights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository is presentation-only: it displays precomputed JSON outputs in a cleaner, user-friendly chart dashboard.
 
-## React Compiler
+## What this project does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Presents insights from 25,000+ remote job listings.
+- Renders interactive charts grouped by analysis theme.
+- Uses static JSON files as data inputs.
 
-## Expanding the ESLint configuration
+## What this project does not do
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- No scraping
+- No data cleaning
+- No transformation/analysis logic
+- No backend/API processing
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+All chart data is exported in advance and stored under `src/data/`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Sections in the dashboard
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Salary Landscape
+  - Salary distribution
+  - Average pay by category and subcategory
+  - Pay range by work type
+- Market Demand
+  - Top required skills
+  - Skills by work type
+  - Skill pairing heatmap
+- Market Shape
+  - Monthly posting volume
+  - Weekly hour distribution
+  - Work type breakdown
+- Pay vs Hours
+  - Scatter plot for pay versus required hours
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 20+ (recommended)
+- pnpm
+
+### Install dependencies
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Start development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm dev
 ```
+
+### Build for production
+
+```bash
+pnpm build
+```
+
+### Preview production build
+
+```bash
+pnpm preview
+```
+
+### Lint
+
+```bash
+pnpm lint
+```
+
+## Data and source repositories
+
+- Analysis source: https://github.com/kenBinary/olj-insights
+- Website source: https://github.com/kenBinary/olj-insights-website
+
+## Notes
+
+- If you update the analysis, export fresh JSON files from the analysis repo and replace the corresponding files in `src/data/`.
+- Keep JSON schema consistent with chart component expectations to avoid runtime chart errors.
