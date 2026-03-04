@@ -84,6 +84,7 @@ export function SalaryDistributionChart() {
             autosize: true,
             paper_bgcolor: "transparent",
             plot_bgcolor: "transparent",
+            height: 450,
           }}
           config={{ responsive: true }}
           style={{ width: "100%" }}
